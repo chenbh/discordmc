@@ -184,11 +184,11 @@ func (m *syncer) syncServerStatus() {
 }
 
 func (m *syncer) sync() {
-	if chatID == "" {
+	if chatID != "" {
 		go m.forwardChat()
 	}
 
-	if adminID == "" {
+	if adminID != "" {
 		go m.forwardAdmin()
 	}
 
