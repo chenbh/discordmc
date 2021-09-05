@@ -48,8 +48,6 @@ func trimPrefix(msg string) string {
 var (
 	infoRegex = regexp.MustCompile(`\[Server thread\/INFO\]`)
 	filters   = []*regexp.Regexp{
-		regexp.MustCompile(`Can't keep up! Is the server overloaded?`),
-		regexp.MustCompile(`\(vehicle of .+\) moved too quickly!`),
 		regexp.MustCompile(`Thread RCON Client`),
 		regexp.MustCompile(`logged in with entity id \d+ at \(.*\)`),
 	}
